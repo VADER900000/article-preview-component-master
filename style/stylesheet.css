@@ -11,7 +11,7 @@ body{
 }
 .boxContainer{
   width: 60%;
-  height: 45vh;
+  height: 50vh;
   display: flex;
   border-radius:20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.253);
@@ -61,10 +61,11 @@ body{
   width: 5em;
   height: 5em;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
-  justify-self: flex-end;
-  align-self: center;
   padding: 5px;
   margin-top: 1.5em;
+  margin: auto auto;
+  padding-right: 0;
+  margin-right: 2em;
 }
 .text{
   position: relative;
@@ -76,12 +77,24 @@ body{
 @media only screen and (max-width: 600px) {
   .boxContainer{
    flex-direction: column;
-   height: 95vh;
+   height: auto;
    width: 95%;
   }
   .Drawers{
     width: 100%;
     padding: 0;
     padding-bottom: 20px;
+  }
+}
+@media only screen and (max-height: 1400px) and (max-width: 1100px){
+  .boxContainer{
+    height: auto;
+    width: auto;
+  }
+}
+@media only screen and (max-height: 1100px) and (max-width: 1400px){
+  .boxContainer{
+    height: auto;
+    width: auto;
   }
 }
