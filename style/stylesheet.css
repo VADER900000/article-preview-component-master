@@ -11,7 +11,7 @@ body{
 }
 .boxContainer{
   width: 60%;
-  height: 40vh;
+  height: 45vh;
   display: flex;
   border-radius:20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.253);
@@ -38,12 +38,16 @@ body{
 .avatarImg{
   border-radius: 100%;
   width: 4em;
+  height: 4em;
   margin-left: 1.4em;
   margin-top: 1.4em;
+  align-self: center;
+  justify-self: center;
 }
 .imgContainer{
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .TextinImgContainer{
   align-self: center;
@@ -52,9 +56,32 @@ body{
 }
 .Sharebtn{
   border-radius: 100%;
-  background-color: #edf1f9;
+  background-color: #e5eaf3;
   border: none;
-  width: 3em;
-  height: 3em;
+  width: 5em;
+  height: 5em;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
+  justify-self: flex-end;
+  align-self: center;
+  padding: 5px;
+  margin-top: 1.5em;
+}
+.text{
+  position: relative;
+  width: 100%;
+}
+.shareIcon{
+  width: 2em;
+}
+@media only screen and (max-width: 600px) {
+  .boxContainer{
+   flex-direction: column;
+   height: 95vh;
+   width: 95%;
+  }
+  .Drawers{
+    width: 100%;
+    padding: 0;
+    padding-bottom: 20px;
+  }
 }
