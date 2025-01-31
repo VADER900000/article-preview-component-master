@@ -48,6 +48,8 @@ body{
   display: flex;
   flex-direction: row;
   width: 100%;
+  position: absolute;
+  bottom: 2em;
 }
 .TextinImgContainer{
   align-self: center;
@@ -74,6 +76,48 @@ body{
 .shareIcon{
   width: 2em;
 }
+.SharePopup{
+  display: flex;
+  background-color: #49556b;
+  border-radius: 20px;
+  font-family: 'Manrope';
+  color: #95a4b9;
+  width: auto;
+  height: auto;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  position: absolute;
+  bottom: 9em;
+  right: -8em;
+}
+.hideShare{
+  display: none;
+}
+.SharePopup::after {
+  content: "";
+  position: absolute;
+  bottom: -60%; /* Adjust for proper positioning */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 25px;
+  border-style: solid;
+  border-color: #3e4a5a transparent transparent transparent;
+}
+.Sharetext{
+  letter-spacing: 0.5em;
+  margin-right: 1em;
+  align-self: center;
+}
+.iconSocial{
+  margin-left: 2em;
+  width: 2em;
+}
+.Sharebtn:active{
+  background-color: #6e7e97;
+  color: white;
+}
 @media only screen and (max-width: 600px) {
   .boxContainer{
    flex-direction: column;
@@ -84,6 +128,37 @@ body{
     width: 100%;
     padding: 0;
     padding-bottom: 20px;
+  }
+  .SharePopup{
+    display: block;
+    left: 0;
+    bottom: auto;
+    position: absolute;
+    z-index: 9;
+    border-radius: 0 0 20px 20px;
+    bottom: -0.3em;
+    width: inherit;
+  }
+  .imgContainer{
+    position: relative;
+    bottom: -0.3em;
+  }
+  .TextinImgContainer{
+    margin: 0;
+    z-index: 0;
+  }
+  .avatarImg{
+    margin-bottom: 1em;
+    margin-right: 0.5em;
+  }
+  .Sharebtn{
+    z-index: 10;
+  }
+  .iconSocial{
+    margin-left: 1em;
+  }
+  .SharePopup::after {
+    display: none;
   }
 }
 @media only screen and (max-height: 1400px) and (max-width: 1100px){
